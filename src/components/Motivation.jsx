@@ -1,13 +1,30 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import '../styles.css'
 
 const Motivation = (props) =>{
+    const [clicked, setClicked] = useState(false)
+
+    const handleClick = ()=>{
+        if(!clicked){
+            setClicked(true)
+        }else{
+            setClicked(false)
+        }
+    }
 
     return(
         <>
-            <div className='message-container'>
-                {props.message}
-            </div>
+            {!clicked ? (
+
+                <div onClick={handleClick} className='message-container-purple'>
+                    {props.message}
+                </div>
+                ):(
+                <div onClick={handleClick} className='message-container-green'>
+                    {props.message}
+                </div>    
+                )
+            }
         </>
     )
 }

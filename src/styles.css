@@ -23,9 +23,16 @@
     display: flex;
 }
 
-.message-container{
+.message-container-purple{
     background-color: rgb(81, 81, 240);
     color: white;
+    margin: 2vw;
+    padding: 1vh
+}
+
+.message-container-green{
+    background-color: rgb(116, 240, 141);
+    color: rgb(183, 127, 235);
     margin: 2vw;
     padding: 1vh
 }
